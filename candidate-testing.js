@@ -3,11 +3,12 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName ;
+let candidateName; // I didn't assign here since doing results in a prompt and the askForName func requires the same thing. 
+
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = 'What trumpet player from E. St. Louis attended The Julliard School and had a profound impact onAmerican music? ';
 let correctAnswer = 'Miles Davis';
-let candidateAnswer;
+let candidateAnswer; //same thing here concerning assignment and prompt requirement in askQuestion()
 
 
 //TODO: Variables for Part 2
