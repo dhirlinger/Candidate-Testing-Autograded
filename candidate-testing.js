@@ -32,10 +32,10 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
-if (candidateAnswer === correctAnswer) {
+if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
   console.log('Your anwser is correct!')
 }  else {
-  console.log('Wrong anwser. Be sure to check your capitalization.')
+  console.log('Wrong anwser. Please try again.')
 }
 console.log(`Your Answer: ${candidateAnswer}`);
 console.log(`Correct Answer: ${correctAnswer}`);
