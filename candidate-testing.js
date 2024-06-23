@@ -43,14 +43,30 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
 
 console.log(`\n`); //for spaceing
-
+console.log(`Candidate Name: ${candidateName}`);
 for (i =0; i < correctAnswers.length; i++) {
   console.log(`${i + 1} \) ${questions[i]}\nYour Answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}\n`);
 }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+  let numberCorrect = 0;
+  let status; 
 
+  for (i=0; i < correctAnswers.length; i++) {
+    if(correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()){
+      numberCorrect++;
+    };
+  }
 
+  grade = numberCorrect / (correctAnswers.length / 100);
+  if (numberCorrect >= 4) {
+    status = 'PASSED';
+  } else {
+    status = 'FAILED';
+  }
+
+  console.log(`>>> OVerall Grade: ${grade}% (${numberCorrect} of ${correctAnswers.length} correct) <<<`);
+  console.log(`>>> Status: ${status} <<<`)
   return grade;
 }
 
